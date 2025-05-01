@@ -1,0 +1,17 @@
+services:
+  pixeleditor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DISPLAY=${DISPLAY}
+      - XAUTHORITY=/tmp/.Xauthority
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/.Xauthority:/tmp/.Xauthority:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro  # System Docker socket
+      - ~/.docker/desktop/docker.sock:/var/run/docker.sock:ro  # Docker Desktop socket (fallback)
+    network_mode: host
+    privileged: true # Required for some graphics drivers
+    # For X11 forwarding to work, run these commands before starting:
+    # xhost +local:docker 
