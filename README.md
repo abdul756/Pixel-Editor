@@ -5,6 +5,8 @@
 
 A simple pixel art editor built with Go and the Fyne UI framework.
 
+https://github.com/user-attachments/assets/84e97a69-7c5f-499e-b275-1a8572e5965d
+
 ## Features
 
 - **Pixel Canvas**: 50x50 grid for creating pixel art
