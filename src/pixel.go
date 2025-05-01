@@ -12,7 +12,7 @@ import (
 
 func main() {
 	pixelApp := app.New()
-	pixelWindow := pixelApp.NewWindow("PixelMaster")
+	pixelWindow := pixelApp.NewWindow("PixelEditor")
 
 	// Set a reasonable window size
 	pixelWindow.Resize(fyne.NewSize(800, 600))
